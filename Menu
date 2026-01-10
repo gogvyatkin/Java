@@ -1,10 +1,25 @@
 import java.util.Scanner;
 
 public class Menu {
+public static void main (String[] args) {
+
+System.out.println("Menu - select a period");
 
 System.out.println("Year");
 System.out.println("month");
 System.out.println("week");
 System.out.println("day");
 
+System.out.print("Insert selection: "); 
+    selection = ReadConsole.nextInt();
+
+    switch (selection)
+    {
+        case 1: System.out.println("You have chosen a year") 
+        case 2: System.out.println("You have chosen a month") 
+        case 3: System.out.println("You have chosen a week") 
+        case 4: System.out.println("You have chosen a day") 
+        break;
+        default:
+        System.out.println("!");
 }
