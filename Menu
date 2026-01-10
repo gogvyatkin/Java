@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class Menu {
+
+System.out.println("Year");
+System.out.println("month");
+System.out.println("week");
+System.out.println("day");
+
+}
