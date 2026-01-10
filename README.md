@@ -4,7 +4,8 @@ Output:
 
 | Menu (select a period) |
 | -------- |
-| year |
-| month |
-| week |
-| day |
+| 1. year |
+| 2. month |
+| 3. week |
+| 4. day |
+| 0. exit |
