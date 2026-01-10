@@ -1,25 +1,51 @@
 import java.util.Scanner;
 
 public class Menu {
-public static void main (String[] args) {
 
-System.out.println("Menu - select a period");
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
 
-System.out.println("Year");
-System.out.println("month");
-System.out.println("week");
-System.out.println("day");
+        while (running) {
 
-System.out.print("Insert selection: "); 
-    selection = ReadConsole.nextInt();
+            System.out.println("MENU");
+            System.out.println("1. year");
+            System.out.println("2. month");
+            System.out.println("3. week");
+            System.out.println("4. day");
+            System.out.println("0. exit");
+            System.out.print("select a period: ");
 
-    switch (selection)
-    {
-        case 1: System.out.println("You have chosen a year") 
-        case 2: System.out.println("You have chosen a month") 
-        case 3: System.out.println("You have chosen a week") 
-        case 4: System.out.println("You have chosen a day") 
-        break;
-        default:
-        System.out.println("!");
+            int choice;
+            try {
+                choice = Integer.parseInt(scanner.nextLine().trim());
+            } catch (NumberFormatException e) {
+                System.out.println("error: enter the menu number");
+                continue;
+            }
+
+            switch (choice) {
+                case 1:
+                    System.out.println("data for the year");
+                    break;
+                case 2:
+                    System.out.println("data for the month");
+                    break;
+                case 3:
+                    System.out.println("data for the week");
+                    break;
+                case 4:
+                    System.out.println("data for the day");
+                    break;
+                case 0:
+                    System.out.println("Goodbye");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Please select the menu item number from 0 to 4");
+            }
+        }
+
+        scanner.close();
+    }
 }
