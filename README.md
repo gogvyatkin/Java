@@ -2,9 +2,9 @@
 
 Output:
 
-| Menu (select a period) 
+| Menu (select a period) |
 | -------- |
-| year  |
+| year |
 
 | month |
 
