@@ -6,6 +6,8 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
+
+        // выводит в консоль список пунктов меню пока не выбран выход из проги(пункт меню - 0. exit)
         while (running) {
 
             System.out.println("MENU");
@@ -18,12 +20,13 @@ public class Menu {
 
             int choice;
             try {
-                choice = Integer.parseInt(scanner.nextLine().trim());
+                choice = Integer.parseInt(scanner.nextLine().trim()); // получает данные от пользователя и засовывает
+                                                                      // их в переменную
             } catch (NumberFormatException e) {
                 System.out.println("error: enter the menu number");
                 continue;
             }
-
+            // выводит на экран рультат, при выборе соответствующего пункта меню
             switch (choice) {
                 case 1:
                     System.out.println("data for the year");
@@ -42,6 +45,7 @@ public class Menu {
                     running = false;
                     break;
                 default:
+                    // выводит сообщение при выборе пункта меню не из интервала значений
                     System.out.println("Please select the menu item number from 0 to 4");
             }
         }
